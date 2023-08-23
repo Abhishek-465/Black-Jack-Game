@@ -41,6 +41,7 @@ function rendergame(){
     else if(sum===21){
         message="wohoo!! You have the Blackjack!"
         hasBlackjack=true
+        isAlive=false
         document.getElementById("bet").innerHTML="Victory!!"
     }
     else{
@@ -51,7 +52,7 @@ function rendergame(){
     messageEl.textContent=message
 }
 function newcard(){
-    if(isAlive===true && hasBlackjack===false){
+    if(isAlive===true){
     let card=getrandom()
     cards.push(card)
     rendergame()
