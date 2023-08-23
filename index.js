@@ -51,7 +51,7 @@ function rendergame(){
     messageEl.textContent=message
 }
 function newcard(){
-    if(isAlive===true || hasBlackjack===true){
+    if(isAlive===true && hasBlackjack===false){
     let card=getrandom()
     cards.push(card)
     rendergame()
